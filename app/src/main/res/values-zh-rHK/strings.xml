@@ -33,4 +33,11 @@
     <string name="about_text2">懷舊大排檔風格餐廳，以舊式香港霓虹燈招牌、鐵閘、酒樓喜宴金龍等作裝飾，提供大排檔菜式如椒鹽粟米、咕嚕肉、香煎蓮藕花枝餅等。</string>
     <string name="title_text2">女人街食飯公司</string>
     <string name="Good_text2">適合大夥人</string>
+    <string name="biometric_subtitle">使用指紋登入</string>
+    <string name="biometric_description">把手指放在“主頁”按鈕上以驗證您的身份</string>
+    <string name="biometric_negative_button_text">取消</string>
+    <string name="biometric_failed">無法識別指紋</string>
+    <string name="biometric_cancelled">用戶取消認證</string>
+    <string name="biometric_failure">登錄失敗！</string>
+    <string name="biometric_error_permission_not_granted">用戶未授予權限</string>
 </resources>

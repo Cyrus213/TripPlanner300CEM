@@ -47,6 +47,7 @@ public class Edit extends AppCompatActivity {
     FirebaseUser user;
     ImageView profileImage;
     StorageReference storageReference;
+    BiometricManager mBiometricManager;
 
 
     @Override
@@ -174,8 +175,6 @@ public class Edit extends AppCompatActivity {
                 i.putExtra("email",email.getText().toString());
                 i.putExtra("phone",phone.getText().toString());
                 startActivity(i);
-//
-
             }
         });
 
