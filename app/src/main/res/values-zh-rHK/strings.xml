@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TripPlanner</string>
+    <string name="app">TripPlanner</string>
+    <string name="about">關於</string>
+    <string name="venue_type">場地類型</string>
+    <string name="map_btn">查看地圖</string>
+    <string name="save_btn">儲存</string>
+    <string name="login_btn">登入</string>
+    <string name="register_btn">註冊</string>
+    <string name="speak_btn">聆聽預覽</string>
+    <string name="create_btn">已經註冊?這裡登入</string>
+    <string name="create_text">註冊帳號</string>
+    <string name="description">開始旅程</string>
+    <string name="create">新用戶?註冊帳號</string>
+    <string name="forgot">忘記密碼?</string>
+    <string name="more">更多資料</string>
+    <string name="label_btn">標籤</string>
+    <string name="labeldefine_btn">定義物品</string>
+    <string name="profile_btn">編輯個人資料</string>
+    <string name="reset_btn">重設密碼</string>
+    <string name="logout_btn">登出</string>
+    <string name="title_text">淥鼎記</string>
+    <string name="venue_text">餐廳(川菜)</string>
+    <string name="about_text">淥鼎記提供養生火鍋及高質中式私房菜，如花膠鮮雞美人鍋、江南八小碟、海鮮大拼盤、重慶麻辣鮮雞煲、金牌手打丸等，樣樣用料十足。餐廳嚴選最新鮮食材，呈獻優質美味的中式佳餚，用餐更不設時限，讓顧客細味各款美食。</string>
+    <string name="good_for">特色</string>
+    <string name="Good_text1">適合大夥人</string>
+    <string name="title_text1">Mamaday</string>
+    <string name="about_text1">這間樓上咖啡店，店內張貼各種有趣金句，裝修大玩幽默風格。而其菜式名字亦極有幽默感，使用的食材也較獨特。如奶油燉飯改用豆漿，Pizza更設有鹹蛋口味。</string>
+    <string name="venue_text1">餐廳( 多國菜)</string>
+    <string name="venue_text2">餐廳(中菜館)</string>
+    <string name="Good_text">適合大夥人 家庭親子</string>
+    <string name="about_text2">懷舊大排檔風格餐廳，以舊式香港霓虹燈招牌、鐵閘、酒樓喜宴金龍等作裝飾，提供大排檔菜式如椒鹽粟米、咕嚕肉、香煎蓮藕花枝餅等。</string>
+    <string name="title_text2">女人街食飯公司</string>
+    <string name="Good_text2">適合大夥人</string>
+</resources>
