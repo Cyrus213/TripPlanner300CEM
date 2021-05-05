@@ -15,6 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TripPlanner">
+        <activity android:name=".UpdateActivity"
+                  android:parentActivityName=".Planner"/>
+        <activity android:name=".AddActivity"
+                  android:parentActivityName=".Planner"/>
+        <activity
+            android:name=".Planner"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".EditProfile" />
         <activity android:name=".Edit" />
         <activity android:name=".Register" />
@@ -24,14 +31,11 @@
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.mlkit.vision.DEPENDENCIES"
-            android:value="label" />
     </application>
 
 </manifest>

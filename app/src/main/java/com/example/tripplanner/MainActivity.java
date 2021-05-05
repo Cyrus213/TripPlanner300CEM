@@ -27,7 +27,7 @@ import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener,BiometricCallback{
     CardView cardView, cardView2, cardView3;
-    Button label_btn;
+    Button plan_button;
     ImageView imageView;
     TextView textView, textView2, textView3, textView4, textView5 , textViewTem;
     SearchView searchView;
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         textView5 = findViewById(R.id.textView4);
         searchView = findViewById(R.id.searchView);
         textViewTem = findViewById(R.id.textViewTem);
+        plan_button = findViewById(R.id.plan_button);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         //Load Animations
         anim_from_button = AnimationUtils.loadAnimation(this, R.anim.anim_from_bottom);
@@ -102,6 +103,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 Intent secondActivity = new Intent(MainActivity.this, SecondActivity.class);
                 secondActivity.putExtra("table_EXTRA", 3);
                 startActivity(secondActivity);
+            }
+        });
+
+        plan_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent planActivity = new Intent(MainActivity.this, Planner.class);
+                startActivity(planActivity);
             }
         });
 
