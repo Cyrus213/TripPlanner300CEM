@@ -2,11 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tripplanner">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -15,10 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TripPlanner">
-        <activity android:name=".UpdateActivity"
-                  android:parentActivityName=".Planner"/>
-        <activity android:name=".AddActivity"
-                  android:parentActivityName=".Planner"/>
+        <activity
+            android:name=".UpdateActivity"
+            android:parentActivityName=".Planner" />
+        <activity
+            android:name=".AddActivity"
+            android:parentActivityName=".Planner" />
         <activity
             android:name=".Planner"
             android:parentActivityName=".MainActivity" />

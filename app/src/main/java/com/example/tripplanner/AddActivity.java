@@ -1,6 +1,10 @@
 package com.example.tripplanner;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +17,7 @@ public class AddActivity extends AppCompatActivity {
     EditText location_input, date_input, time_input;
     Button add_button;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +27,7 @@ public class AddActivity extends AppCompatActivity {
         date_input = findViewById(R.id.date_input);
         time_input = findViewById(R.id.time_input);
         add_button = findViewById(R.id.add_button);
+
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
