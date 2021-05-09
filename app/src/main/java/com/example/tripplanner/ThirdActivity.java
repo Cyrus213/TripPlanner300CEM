@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class ThirdActivity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity {//set the third page of recommend place
     ImageView down_arrow;
     ScrollView third_scrollview;
     Animation from_bottom;
@@ -82,7 +82,7 @@ public class ThirdActivity extends AppCompatActivity {
             Type_of_view.setText(R.string.Good_text2);
         }
 
-        roadmap_button.setOnClickListener(new View.OnClickListener(){
+        roadmap_button.setOnClickListener(new View.OnClickListener(){//locate the place of the recommend place
             @Override
             public void onClick(View view) {
                 String store="";
@@ -102,7 +102,7 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
 
-        mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+        mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {//speak the word to the user
             @Override
             public void onInit(int status) {
                 String store = Locale.getDefault().getLanguage();

@@ -42,6 +42,32 @@
         app:layout_constraintTop_toBottomOf="@+id/date_input" />
 
     <Button
+        android:id="@+id/onoff_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:text="On/Off"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_input"
+        android:onClick="onStartClicked" />
+
+    <Button
+        android:id="@+id/locate_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:text="Locate"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onoff_button"
+        android:onClick="onLocateClicked" />
+
+    <Button
         android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -51,6 +77,6 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_input" />
+        app:layout_constraintTop_toBottomOf="@+id/locate_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

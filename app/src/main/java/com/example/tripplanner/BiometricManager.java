@@ -10,7 +10,7 @@ import android.os.CancellationSignal;
 import androidx.annotation.NonNull;
 
 
-public class BiometricManager {
+public class BiometricManager {//fingerprint method
     private String title;
     private String subtitle;
     private String description;
@@ -25,7 +25,7 @@ public class BiometricManager {
         this.description = biometricBuilder.description;
         this.negativeButtonText = biometricBuilder.negativeButtonText;
     }
-    public void authenticate(@NonNull final BiometricCallback biometricCallback) {
+    public void authenticate(@NonNull final BiometricCallback biometricCallback) {//check the condition
         if(title == null) {
             biometricCallback.onBiometricAuthenticationInternalError("Biometric Dialog title cannot be null");
             return;
@@ -60,7 +60,7 @@ public class BiometricManager {
         }
         displayBiometricDialog(biometricCallback);
     }
-    public void cancelAuthentication(){
+    public void cancelAuthentication(){//user cancel authentication
         if(BiometricUtils.isBiometricPromptEnabled()) {
             if (!mCancellationSignal.isCanceled())
                 mCancellationSignal.cancel();
@@ -82,7 +82,8 @@ public class BiometricManager {
                         new BiometricCallbackV28(biometricCallback));
     }
 
-    public static class BiometricBuilder {
+    public static class BiometricBuilder {//a class for creating a BiometricManager
+        //Display BiometricPrompt dialog
         private String title;
         private String subtitle;
         private String description;

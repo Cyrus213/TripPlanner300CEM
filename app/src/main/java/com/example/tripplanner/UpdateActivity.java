@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class UpdateActivity extends AppCompatActivity {
+public class UpdateActivity extends AppCompatActivity {//update the SQLite data
 
     EditText location_input, date_input, time_input;
     Button update_button, delete_button;
@@ -39,7 +39,7 @@ public class UpdateActivity extends AppCompatActivity {
             ab.setTitle(location);
         }
 
-        update_button.setOnClickListener(new View.OnClickListener() {
+        update_button.setOnClickListener(new View.OnClickListener() {//update the trip data into SQLite database
             @Override
             public void onClick(View view) {
                 //And only then we call this
@@ -59,7 +59,7 @@ public class UpdateActivity extends AppCompatActivity {
 
     }
 
-    void getAndSetIntentData(){
+    void getAndSetIntentData(){//get the trip data of the user
         if(getIntent().hasExtra("id") && getIntent().hasExtra("location") &&
                 getIntent().hasExtra("date") && getIntent().hasExtra("time")){
             //Getting Data from Intent
@@ -78,7 +78,7 @@ public class UpdateActivity extends AppCompatActivity {
         }
     }
 
-    void confirmDialog(){
+    void confirmDialog(){//confirm dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete " + location + " ?");
         builder.setMessage("Are you sure you want to delete " + location + " ?");

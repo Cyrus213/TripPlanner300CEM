@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 
-public class MyDatabaseHelper extends  SQLiteOpenHelper{
+public class MyDatabaseHelper extends  SQLiteOpenHelper{//the SQLiteOpenHelper of the SQLite database
 
     private Context context;
     private static final String DATABASE_NAME = "TripLibrary.db";
@@ -28,7 +28,7 @@ public class MyDatabaseHelper extends  SQLiteOpenHelper{
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(SQLiteDatabase db) {//create SQL
         String query = "CREATE TABLE " + TABLE_NAME +
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "trip_location TEXT, " +
@@ -37,12 +37,12 @@ public class MyDatabaseHelper extends  SQLiteOpenHelper{
         db.execSQL(query);
     }
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int i, int i1) {//if exists update
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 
-    void addtrip(String location, String date, String time){
+    void addtrip(String location, String date, String time){//get the return value and add the trip data into database
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -57,7 +57,7 @@ public class MyDatabaseHelper extends  SQLiteOpenHelper{
         }
     }
 
-    Cursor readAllData(){
+    Cursor readAllData(){//read data
         String query = "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -68,7 +68,8 @@ public class MyDatabaseHelper extends  SQLiteOpenHelper{
         return cursor;
     }
 
-    void updateData(String row_id, String location, String date, String time){
+    void updateData(String row_id, String location, String date, String time){//get the return value and update the trip data into database
+
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_LOCATION, location);
@@ -84,7 +85,7 @@ public class MyDatabaseHelper extends  SQLiteOpenHelper{
 
     }
 
-    void deleteOneRow(String row_id){
+    void deleteOneRow(String row_id){//delete selected trip
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, "_id=?", new String[]{row_id});
         if(result == -1){
@@ -94,7 +95,7 @@ public class MyDatabaseHelper extends  SQLiteOpenHelper{
         }
     }
 
-    void deleteAllData(){
+    void deleteAllData(){//delete all trip
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME);
     }

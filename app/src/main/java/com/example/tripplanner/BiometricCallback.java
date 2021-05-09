@@ -1,5 +1,5 @@
 package com.example.tripplanner;
-
+//interface for fingerprint
 public interface BiometricCallback {
     void onSdkVersionNotSupported();
     void onBiometricAuthenticationNotSupported();

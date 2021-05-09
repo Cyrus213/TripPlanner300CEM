@@ -36,7 +36,7 @@ import com.squareup.picasso.Picasso;
 
 import javax.annotation.Nullable;
 
-public class Edit extends AppCompatActivity {
+public class Edit extends AppCompatActivity {//edit the account in firebase
     private static final int GALLERY_INTENT_CODE = 1023 ;
     TextView fullName,email,phone,verifyMsg;
     FirebaseAuth fAuth;
@@ -47,11 +47,10 @@ public class Edit extends AppCompatActivity {
     FirebaseUser user;
     ImageView profileImage;
     StorageReference storageReference;
-    BiometricManager mBiometricManager;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {//get the data from firebase
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
         phone = findViewById(R.id.profilePhone);
@@ -86,7 +85,7 @@ public class Edit extends AppCompatActivity {
             verifyMsg.setVisibility(View.VISIBLE);
             resendCode.setVisibility(View.VISIBLE);
 
-            resendCode.setOnClickListener(new View.OnClickListener() {
+            resendCode.setOnClickListener(new View.OnClickListener() {//check if the account already verification
                 @Override
                 public void onClick(final View v) {
 

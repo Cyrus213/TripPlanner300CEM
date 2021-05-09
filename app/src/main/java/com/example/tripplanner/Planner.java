@@ -22,7 +22,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
-public class Planner extends AppCompatActivity {
+public class Planner extends AppCompatActivity {//trip planner
 
     RecyclerView recyclerView;
     FloatingActionButton add_button;
@@ -73,7 +73,7 @@ public class Planner extends AppCompatActivity {
         }
     }
 
-    void storeDataInArrays(){
+    void storeDataInArrays(){//store data in array
         Cursor cursor = myDB.readAllData();
         if(cursor.getCount() == 0){
             empty_imageview.setVisibility(View.VISIBLE);
@@ -91,7 +91,7 @@ public class Planner extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {//menu
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.my_menu, menu);
         return super.onCreateOptionsMenu(menu);
@@ -105,7 +105,7 @@ public class Planner extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    void confirmDialog(){
+    void confirmDialog(){//delete all data dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete All?");
         builder.setMessage("Are you sure you want to delete all Data?");

@@ -25,7 +25,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class MainActivity extends AppCompatActivity implements SensorEventListener,BiometricCallback{
+public class MainActivity extends AppCompatActivity implements SensorEventListener,BiometricCallback{//homepage
     CardView cardView, cardView2, cardView3;
     Button plan_button;
     ImageView imageView;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {//set animation of the homepage
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cardView = findViewById(R.id.cardView);
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         textView5.setAnimation(anim_from_top);
         searchView.setAnimation(anim_from_left);
 
-        if(sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)!=null){
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)!=null){//temperature sensor
             tempSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
             isTemperatureSsensoreAvilable = true;
         }else{
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         });
 
-        plan_button.setOnClickListener(new View.OnClickListener() {
+        plan_button.setOnClickListener(new View.OnClickListener() {//go to trip planner
             @Override
             public void onClick(View view) {
                 Intent planActivity = new Intent(MainActivity.this, Planner.class);
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         });
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {//search in internet
             @Override
             public boolean onQueryTextSubmit(String s) {
                 String search = searchView.getQuery().toString();
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         });
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {//go to the profile
             @Override
             public void onClick(View view2) {
                 mBiometricManager = new BiometricManager.BiometricBuilder(MainActivity.this)
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onAccuracyChanged(Sensor sensor, int i) {
     }
 
-    public void searchNet(String words){
+    public void searchNet(String words){//search method
         try{
             Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
             intent.putExtra(SearchManager.QUERY,words);
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             sensorManager.unregisterListener(this);
         }
     }
-
+    //action of the fingerprint
     @Override
     public void onSdkVersionNotSupported() {
         Intent secondActivity = new Intent(MainActivity.this, Edit.class);
